@@ -31,7 +31,7 @@ public class ExpandListData {
                 if(subObject.getString("name").equals("") || subObject.isNull("name")){
                     continue;
                 }
-                //If not firs item name with ID x then ge the list that is already in there and just add to it
+                //If not first item name with this ID then get the list that is already in there and update it
                 if (expandableListData.containsKey(listID)) {
                     list = expandableListData.get(listID);
                 }
