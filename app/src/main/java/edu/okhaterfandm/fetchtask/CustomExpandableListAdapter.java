@@ -22,7 +22,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         this.expandableListTitle = expandableListTitle;
         this.expandableListDetail = expandableListDetail;
     }
-
+    //Children helper functions
     @Override
     public Object getChild(int listPosition, int expandedListPosition) {
         return this.expandableListDetail.get(this.expandableListTitle.get(listPosition))
@@ -33,7 +33,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
     public long getChildId(int listPosition, int expandedListPosition) {
         return expandedListPosition;
     }
-
+    //Returns the view of the children
     @Override
     public View getChildView(int listPosition, final int expandedListPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
@@ -69,7 +69,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
     public long getGroupId(int listPosition) {
         return listPosition;
     }
-
+    //Returns the view of the group
     @Override
     public View getGroupView(int listPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
